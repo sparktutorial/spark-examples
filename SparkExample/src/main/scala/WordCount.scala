@@ -16,4 +16,5 @@ object WordCount {
     finalResult.collect.foreach(println)
 
     finalResult.saveAsTextFile(output)
+  }
 }

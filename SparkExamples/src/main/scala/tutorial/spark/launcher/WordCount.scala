@@ -7,6 +7,6 @@ import org.apache.spark.{SparkConf, SparkContext}
   */
 object WordCount {
   def main(args: Array[String]): Unit = {
-
+    println("Test Class")
   }
 }

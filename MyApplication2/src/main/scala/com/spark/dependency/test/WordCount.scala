@@ -2,9 +2,8 @@ package com.spark.dependency.test
 
 import org.apache.spark.{SparkConf, SparkContext}
 
-/**
-  * Created by cloudwick on 6/18/2018.
-  */
+
+
 object WordCount {
   def main(args: Array[String]): Unit = {
     val conf = new SparkConf().setAppName("WordCount")

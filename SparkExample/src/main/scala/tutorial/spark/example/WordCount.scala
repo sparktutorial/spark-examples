@@ -23,6 +23,7 @@ object WordCount {
 
     val conf = new SparkConf().setAppName("WordCount")
     val sc = new SparkContext(conf)
+    //test
 
     val input = "/user/cloudera/input1.txt"//args(0)
     val output = "/user/cloudera/Output1"///args(1)

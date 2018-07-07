@@ -6,7 +6,7 @@ import java.sql.DriverManager
 object Oracle_Insert {
   def main(args: Array[String]): Unit = {
     Class.forName("oracle.jdbc.driver.OracleDriver")
-    val con = DriverManager.getConnection("jdbc:oracle:thin:@cdtsorl363p.rxcorp.com:1521:PONE2","username","password")
+    val con = DriverManager.getConnection("jdbc:oracle:thin:@hostname:1521/serviceid","username","password")
     val sqlStatement =
       """
         | INSERT INTO job_status (jobId, fail_msg, status, cfg, start_ts, end_ts, all_step_status, parent_col)

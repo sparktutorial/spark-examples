@@ -1,8 +1,6 @@
 import org.apache.spark.{SparkConf, SparkContext}
 
-/**
-  * Created by cloudwick on 6/18/2018.
-  */
+
 object WordCount {
   def main(args: Array[String]): Unit = {
     val conf = new SparkConf().setAppName("WordCount")
@@ -14,7 +12,7 @@ object WordCount {
     val inputData = sc.textFile(input, 3)
     val finalResult = inputData.flatMap(x => x.split(",")).map(x => (x, 1)).reduceByKey((x, y) => x + y)
     finalResult.collect.foreach(println)
-
+	finalResult.count.foreach(println)
     finalResult.saveAsTextFile(output)
   }
 }

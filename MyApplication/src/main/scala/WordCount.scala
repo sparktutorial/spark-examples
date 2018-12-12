@@ -14,7 +14,6 @@ object WordCount {
     val inputData = sc.textFile(input, 3)
     val finalResult = inputData.flatMap(x => x.split(",")).map(x => (x, 1)).reduceByKey((x, y) => x + y)
     finalResult.collect.foreach(println)
-
     finalResult.saveAsTextFile(output)
   }
 }

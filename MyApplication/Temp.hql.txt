@@ -1,0 +1,4 @@
+Create table tempTable(
+column1 String,
+column2 String
+) stored as parquet;
